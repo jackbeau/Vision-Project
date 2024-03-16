@@ -1,13 +1,13 @@
 # Team Project Report
 
 ## Achievement Overview:
-Our team has successfully implemented an image to object character recognition (OCR) algrithm. Using various computer vision algorithms, we seperate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
+Our team has successfully implemented an image to object character recognition (OCR) algorithm. Using various computer vision algorithms, we separate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
 
 - Utilized morphology operations to create a blank canvas for document alignment.
 - Implemented Canny edge detection and contour finding to identify document edges.
-- Applied the Douglas-Peucker algorithm for corner detection to determine the quadrilateral representing the document boundaries.
-- Conducted a perspective transform using homography to align the document.
-- Performed objecct character recognition on the identified document.
+- Applied the Ramer-Douglas-Peucker algorithm for corner detection to determine the quadrilateral representing the document boundaries.
+- Conducted a perspective transform using Homography to align the document.
+- Performed Optical Character Recognition on the identified document.
 
 Both team members actively contributed to coding, debugging, and documenting the project.
 
@@ -61,7 +61,7 @@ In the future, I would explore alternative solutions to make the OCR work with h
 ## James's Personal Statement:
 
 ### Personal Contribution:
-In this project, my primary contributions revolved around implementing the morphology operations, Canny edge detection, and contour finding algorithms. I also compiled the code togeather and appropriately documented it.
+In this project, my primary contributions revolved around implementing the morphology operations, Canny edge detection, and contour finding algorithms. I also compiled the code together and appropriately documented it.
 
 ### Reflection:
 Engaging in this project provided me with valuable insights into the practical applications of computer vision algorithms, especially in document processing tasks. Implementing morphology operations and edge detection techniques deepened my understanding of image preprocessing steps crucial for subsequent analysis. 
