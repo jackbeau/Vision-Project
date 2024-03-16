@@ -35,7 +35,7 @@ You can change the code to use images you provide yourself, if you want to explo
 - Handle extremely skewed or distorted documents.
 - Handle documents where all four corners are not visible, or with noisy backgrounds.
 - Guarantee perfect alignment in all scenarios, especially when dealing with highly complex document layouts.
-- Perform OCR on handwrighting.
+- Perform OCR on handwriting.
 
 ---
 
