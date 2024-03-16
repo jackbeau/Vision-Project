@@ -36,3 +36,42 @@ You can change the code to use images you provide yourself, if you want to explo
 - Handle documents where all four corners are not visible, or with noisy backgrounds.
 - Guarantee perfect alignment in all scenarios, especially when dealing with highly complex document layouts.
 - Perform OCR on handwrighting.
+
+---
+
+# Personal Statements
+
+## Jack's Personal Statement:
+
+### Personal Contribution:
+In this project, I primarily focused on implementing the corner detection using the Douglas-Peucker algorithm and the perspective transform using homography. I contributed to coding these functionalities, debugging, and ensuring their integration with the overall project. I furthermore implemented the OCR functionality.
+
+### Reflection:
+Throughout this project, I've learned a great deal about the practical application of computer vision techniques in real-world scenarios. Specifically, diving deep into corner detection algorithms expanded my understanding of geometric transformations and image processing. Moreover, working collaboratively with my team member allowed me to enhance my GitHub skills. Having used a number of OCR tools for my Masters project, integrating this was quite an easy task.
+
+### Design Decisions:
+One of the key design decisions I made was to utilize the Douglas-Peucker algorithm for corner detection due to its efficiency and accuracy in identifying key points in the document contours. Additionally, opting for homography-based perspective transform provided a robust method for aligning documents.
+
+### Mistakes and Lessons Learned:
+One mistake I made during the project was underestimating the complexity of fine-tuning parameters for the corner detection algorithm. This led to some initial inaccuracies in corner localization, which required iterative adjustments and testing. This experience taught me the importance of thorough parameter tuning and testing before finalizing implementation.
+
+### Future Improvements:
+In the future, I would explore alternative solutions to make the OCR work with handwriting.
+
+## James's Personal Statement:
+
+### Personal Contribution:
+In this project, my primary contributions revolved around implementing the morphology operations, Canny edge detection, and contour finding algorithms. I also compiled the code togeather and appropriately documented it.
+
+### Reflection:
+Engaging in this project provided me with valuable insights into the practical applications of computer vision algorithms, especially in document processing tasks. Implementing morphology operations and edge detection techniques deepened my understanding of image preprocessing steps crucial for subsequent analysis. 
+
+### Design Decisions:
+A key design decision I made was to apply morphological operations to create a blank canvas for document alignment. Additionally, opting for Canny edge detection followed by contour finding allowed us to accurately identify document boundaries, paving the way for further processing steps.
+
+### Mistakes and Lessons Learned:
+Similarly to Jack, fine-tuning the paramaters turned out to be the biggest challenge, as it proved to be a challenge to make the edge detection work on a wide range of images.
+
+### Future Improvements:
+If I were to do this project again, I would invest more time upfront in understanding and experimenting with parameter settings for corner detection, and explore altertnative solutions to make the code work with noisy backgrounds. The homography transform was also the slowest part of the code, and required severly downscaling the resolution of the image, which is an aspect of the project which could be further optimised.
+
