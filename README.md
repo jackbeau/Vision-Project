@@ -3,7 +3,7 @@
 ## Achievement Overview:
 Our team has successfully implemented an algorithm to flatten images of documents and extract textual information using optical character recognition (OCR). Using various computer vision algorithms, we separate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
 
-- Utilized morphology operations to remove detail/text from a document to aid edge detection.
+- Used morphology operations to remove detail/text from a document to aid edge detection.
 - Implemented Canny edge detection and contour finding to identify document edges.
 - Applied the Ramer-Douglas-Peucker algorithm for corner detection to determine the quadrilateral representing the document boundaries.
 - Conducted a perspective transform using Homography to align the document.
@@ -14,15 +14,19 @@ Both team members actively contributed to coding, debugging, and documenting the
 ## Special Instructions:
 To replicate our results and run the application locally, please follow these instructions:
 
-1. Ensure that you have the necessary Python libraries installed: OpenCV, NumPy, and Matplotlib.
-2. Clone the repository to your local machine.
-3. Download the provided image files and place them in the appropriate directory as specified in the code.
-4. Run the Python script to execute the document alignment process.
-5. View the output displayed using Matplotlib to observe the aligned document.
-
-You can change the code to use images you provide yourself, if you want to explore other results.
+1. Clone the repository to your local machine.
+2. Ensure that you have the necessary Python libraries installed: OpenCV, NumPy, Matplotlib and OCRmyPDF. You can install these by runnning `pip install -r requirements.txt`.
+3. Add your input images to the img directory within the project.
+4. Run the Python script to execute the document alignment process. Change the `image_name` to match the desired input image.
+5. View the output displayed using Matplotlib to observe the aligned document. The OCR output in saved in the project root directory.
 
 ## Evidences of Functionality:
+
+Below the original image, identified edges and resulting image transformation can be seen.
+![Result](src/Result.png)
+
+Once transformed, OCR is performed to identify text in the image, and append it on a transparent layer in a PDF. Below this text has been highlighted to show the successful output.
+![OCR Output](src/OCR_result.png)
 
 ## Application Evaluation:
 ### What Our Application Can Do:
@@ -53,7 +57,7 @@ Throughout this project, I've learned a great deal about the practical applicati
 One of the key design decisions I made was to utilize the Douglas-Peucker algorithm for corner detection due to its efficiency and accuracy in identifying key points in the document contours. Additionally, opting for homography-based perspective transform provided a robust method for aligning documents.
 
 ### Mistakes and Lessons Learned:
-One mistake I made during the project was underestimating the complexity of fine-tuning parameters for the corner detection algorithm. This led to some initial inaccuracies in corner localization, which required iterative adjustments and testing. This experience taught me the importance of thorough parameter tuning and testing before finalizing implementation.
+One mistake I made during the project was underestimating the complexity of fine-tuning parameters for the corner detection algorithm. This led to some initial inaccuracies in corner localization, which required iterative adjustments and testing. This experience taught me the importance of thorough parameter tuning and testing before finalising implementation.
 
 ### Future Improvements:
 In the future, I would explore alternative solutions to make the OCR work with handwriting.
