@@ -6,7 +6,7 @@ high_quality = False 			# HQ is slower but better
 image_name = "5-notice.png"		# Image name plus extension
 BW = False						# Black and white vs colour output document 
 
-img = cv2.imread('./Jack attempt/' + image_name, cv2.IMREAD_COLOR)
+img = cv2.imread('./img/' + image_name, cv2.IMREAD_COLOR)
 
 if not high_quality:			# Rescale the image to 1920p
 	size_lim = 1920

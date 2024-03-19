@@ -1,9 +1,9 @@
 # Team Project Report
 
 ## Achievement Overview:
-Our team has successfully implemented an image to object character recognition (OCR) algorithm. Using various computer vision algorithms, we separate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
+Our team has successfully implemented an algorithm to flatten images of documents and extract textual information using optical character recognition (OCR). Using various computer vision algorithms, we separate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
 
-- Utilized morphology operations to create a blank canvas for document alignment.
+- Utilized morphology operations to remove detail/text from a document to aid edge detection.
 - Implemented Canny edge detection and contour finding to identify document edges.
 - Applied the Ramer-Douglas-Peucker algorithm for corner detection to determine the quadrilateral representing the document boundaries.
 - Conducted a perspective transform using Homography to align the document.
@@ -26,13 +26,13 @@ You can change the code to use images you provide yourself, if you want to explo
 
 ## Application Evaluation:
 ### What Our Application Can Do:
-- Perform document alignment using morphology, edge detection, contour finding, corner detection, and perspective transform techniques.
+- Perform document alignment using morphological operations, edge detection, contour finding, corner detection, and perspective transform techniques.
 - Handle various document orientations and sizes.
 - Achieve accurate alignment results in most cases.
 - Perform OCR on the document.
 
 ### What Our Application Cannot Do:
-- Handle extremely skewed or distorted documents.
+- Handle extremely skewed or distorted documents, or documents with non-straight (i.e. curved/distorted edges).
 - Handle documents where all four corners are not visible, or with noisy backgrounds.
 - Guarantee perfect alignment in all scenarios, especially when dealing with highly complex document layouts.
 - Perform OCR on handwriting.
@@ -61,17 +61,17 @@ In the future, I would explore alternative solutions to make the OCR work with h
 ## James's Personal Statement:
 
 ### Personal Contribution:
-In this project, my primary contributions revolved around implementing the morphology operations, Canny edge detection, and contour finding algorithms. I also compiled the code together and appropriately documented it.
+In this project, my primary contributions revolved around implementing the algorithms which find the outline of the page: morphology operations to remove detail, Canny edge detection to find edges, and contour finding algorithms to find complete document edges. I also compiled the code together and appropriately documented it.
 
 ### Reflection:
 Engaging in this project provided me with valuable insights into the practical applications of computer vision algorithms, especially in document processing tasks. Implementing morphology operations and edge detection techniques deepened my understanding of image preprocessing steps crucial for subsequent analysis. 
 
 ### Design Decisions:
-A key design decision I made was to apply morphological operations to create a blank canvas for document alignment. Additionally, opting for Canny edge detection followed by contour finding allowed us to accurately identify document boundaries, paving the way for further processing steps.
+A key design decision I made was to apply morphological operations remove document detail for document alignment - this ensured the size of the document was unchanged but regions of text are 'closed'. Additionally, opting for Canny edge detection followed by contour finding allowed us to accurately identify document boundaries, paving the way for further processing steps.
 
 ### Mistakes and Lessons Learned:
-Similarly to Jack, fine-tuning the paramaters turned out to be the biggest challenge, as it proved to be a challenge to make the edge detection work on a wide range of images.
+Similarly to Jack, fine-tuning the paramaters such as the exact size (6x6) of the kernel for morphological closing operation turned out to be the biggest challenge, as it proved to be a challenge to make the edge detection work on a wide range of images. I also found it a challenge to learn how to implement operations I have used in MATLAB in their Python equivalents - but overall this was worth it due to the extra functionality of the available OCR packages in Python.
 
 ### Future Improvements:
-If I were to do this project again, I would invest more time upfront in understanding and experimenting with parameter settings for corner detection, and explore altertnative solutions to make the code work with noisy backgrounds. The homography transform was also the slowest part of the code, and required severly downscaling the resolution of the image, which is an aspect of the project which could be further optimised.
+If I were to do this project again, I would invest more time upfront in understanding and experimenting with parameter settings for corner detection, and explore alternative solutions to make the code work with noisy backgrounds. The homography transform was also the slowest part of the code, and required severly downscaling the resolution of the image, which is an aspect of the project which could be further optimised.
 
