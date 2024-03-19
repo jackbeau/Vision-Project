@@ -6,9 +6,9 @@ import tempfile
 import os
 
 # HQ is slower but better
-high_quality = False
+high_quality = True
 # Image name plus extension
-image_name = "4-notice.png"
+image_name = "2-doc.jpg"
 # Black and white vs colour output document
 BW = False
 
