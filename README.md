@@ -15,7 +15,7 @@ Both team members actively contributed to coding, debugging, and documenting the
 To replicate our results and run the application locally, please follow these instructions:
 
 1. Clone the repository to your local machine.
-2. Ensure that you have the necessary Python libraries installed: OpenCV, NumPy, Matplotlib and OCRmyPDF. You can install these by runnning `pip install -r requirements.txt`.
+2. Ensure that you have the necessary Python libraries installed: OpenCV, NumPy, Matplotlib and OCRmyPDF. You can install these by runnning `pip install -r requirements.txt`. Note that OCRmyPDF has several dependencies which may not be installed by default (pytesseract and ghostscript in particular), and these may require separate installation.
 3. Add your input images to the img directory within the project.
 4. Run the Python script to execute the document alignment process. Change the `image_name` to match the desired input image.
 5. View the output displayed using Matplotlib to observe the aligned document. The OCR output in saved in the ourput directory.

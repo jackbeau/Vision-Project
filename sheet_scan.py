@@ -8,7 +8,7 @@ import os
 # HQ is slower but better
 high_quality = True
 # Image name plus extension
-image_name = "2-doc.jpg"
+image_name = "3-letter.jpeg"
 # Black and white vs colour output document
 BW = False
 
@@ -16,7 +16,7 @@ img = cv2.imread('./img/' + image_name, cv2.IMREAD_COLOR)
 img_name = os.path.splitext(image_name)[0]
 
 if not high_quality:			# Rescale the image to 1920p
-    size_lim = 1920
+    size_lim = 1080
     size_max = max(img.shape)
 
     if size_max > size_lim:
