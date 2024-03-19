@@ -8,7 +8,7 @@ import os
 # HQ is slower but better
 high_quality = False
 # Image name plus extension
-image_name = "5-notice.png"
+image_name = "4-notice.png"
 # Black and white vs colour output document
 BW = False
 
@@ -152,7 +152,7 @@ final = cv2.warpPerspective(
 # Create tempfile and OCR the original image
 with tempfile.NamedTemporaryFile(suffix=".jpg") as temp_file:
     cv2.imwrite(temp_file.name, final)
-    output_pdf = img_name + '_ocr.pdf'
+    output_pdf = 'outputs/' + img_name + '_ocr.pdf'
     if __name__ == '__main__':
         ocrmypdf.ocr(temp_file.name, output_pdf, deskew=True, image_dpi=100)
 
