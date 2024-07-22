@@ -1,4 +1,4 @@
-# Team Project Report
+# Project Report
 
 ## Achievement Overview:
 Our team has successfully implemented an algorithm to flatten images of documents and extract textual information using optical character recognition (OCR). Using various computer vision algorithms, we separate the image of a document from it's background, align it and perform OCR. Specifically, we have achieved the following:
